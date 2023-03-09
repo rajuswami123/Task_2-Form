@@ -1,0 +1,19 @@
+function validate() {
+let name = document.forms["frm"]["name"].value;
+let age = document.forms["frm"]["age"].value;
+    let date = document.forms["frm"]["date"].value;
+
+    if (name == "") {
+        alert("Please enter your name.");
+        return false;
+    }
+    if (isNaN(age) || age < 1 || age > 100) {
+        alert("Please enter a valid age.");
+        return false;
+    }
+    if (date == "") {
+        alert("Please enter a date.");
+        return false;
+    }
+    return true;
+}
